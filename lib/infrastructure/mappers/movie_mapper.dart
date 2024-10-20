@@ -17,7 +17,7 @@ class MovieMapper {
       posterPath: (moviedb.posterPath != '')
         ? 'https://image.tmdb.org/t/p/w500${moviedb.posterPath}'
         : 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheposterdb.com%2Fimages%2Fdefaults%2Fmissing_poster.jpg&f=1&nofb=1&ipt=abd0bceedf44599c3c06ac9eb68700dcde1bb7e99aa78db3d4422f7d62300b2e&ipo=images',
-      releaseDate: moviedb.releaseDate != null ? moviedb.releaseDate! : DateTime.now(),
+      releaseDate: moviedb.releaseDate ?? DateTime.now(),
       title: moviedb.title,
       video: moviedb.video,
       voteAverage: moviedb.voteAverage,
