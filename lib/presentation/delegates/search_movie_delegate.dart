@@ -109,6 +109,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie?> {
       stream: debounceMovies.stream,
       builder: (context, snapshot) {
         final movies = snapshot.data ?? [];
+        
         return ListView.builder(
           itemCount: movies.length,
           itemBuilder: (context, index) {

@@ -29,7 +29,7 @@ class CustomAppbar extends ConsumerWidget {
               const Spacer(), //Sirve para tomar todo el espacio del Row.
 
               IconButton(onPressed: () {
-                //TODO:
+                //TODO Funcionalidad boton de busqueda
                 final searchedMovies = ref.watch(searchedMoviesProvider);
                 final searchQuery = ref.read(searchQueryProvider);
 
@@ -42,7 +42,7 @@ class CustomAppbar extends ConsumerWidget {
                   ) 
                 ).then((movie) {
                   if(movie == null) return;
-                  context.push('/movie/${movie.id}');
+                  context.push('/home/0/movie/${movie.id}');
                 });
               }, 
               icon: const Icon(Icons.search))
